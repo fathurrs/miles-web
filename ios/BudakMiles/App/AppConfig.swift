@@ -3,6 +3,17 @@ import Foundation
 enum AppConfig {
     static let userAgentSuffix = "BudakMilesApp/1.0 (iOS)"
 
+    /// The rute tabs are separate pages on one origin that each keep a copy of their `mr:` localStorage
+    /// data (e.g. the miles wallet) in memory; a tab whose copy went stale is reloaded when shown again.
+    static let sharedStorageMessage = "sharedStorageChanged"
+    static let sharedStorageWatchScript = """
+    window.addEventListener('storage', function (e) {
+      if (e.key === null || e.key.indexOf('mr:') === 0) {
+        window.webkit.messageHandlers.\(sharedStorageMessage).postMessage(e.key || '');
+      }
+    });
+    """
+
     /// The sites draw their own bottom menu (`nav.tabbar`); the app's tab bar replaces it.
     static let hideWebTabBarScript = """
     (function () {

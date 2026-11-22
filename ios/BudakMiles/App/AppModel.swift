@@ -3,7 +3,11 @@ import UIKit
 
 @MainActor
 final class AppModel: ObservableObject {
-    @Published var selectedTab: AppTab = .kalkulator
+    @Published var selectedTab: AppTab = .kalkulator {
+        didSet {
+            if selectedTab != oldValue { store(for: selectedTab).reloadIfStale() }
+        }
+    }
     let stores: [AppTab: WebViewStore]
 
     init() {

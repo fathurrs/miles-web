@@ -17,6 +17,7 @@ final class WebViewStore: NSObject, ObservableObject {
     private var lastRequestedURL: URL?
     private var observations: [NSKeyValueObservation] = []
     private var hasLoaded = false
+    private var isStale = false
 
     init(tab: AppTab, rootURL: URL) {
         self.tab = tab
@@ -27,8 +28,13 @@ final class WebViewStore: NSObject, ObservableObject {
         config.allowsInlineMediaPlayback = true
         config.userContentController.addUserScript(WKUserScript(
             source: AppConfig.hideWebTabBarScript, injectionTime: .atDocumentStart, forMainFrameOnly: true))
+        config.userContentController.addUserScript(WKUserScript(
+            source: AppConfig.sharedStorageWatchScript, injectionTime: .atDocumentStart, forMainFrameOnly: true))
+        let messageProxy = WeakScriptMessageHandler()
+        config.userContentController.add(messageProxy, name: AppConfig.sharedStorageMessage)
         webView = WKWebView(frame: .zero, configuration: config)
         super.init()
+        messageProxy.onMessage = { [weak self] in self?.isStale = true }
 
         webView.accessibilityIdentifier = "webView.\(tab.rawValue)"
         webView.allowsBackForwardNavigationGestures = true
@@ -57,9 +63,16 @@ final class WebViewStore: NSObject, ObservableObject {
 
     func load(_ url: URL) {
         hasLoaded = true
+        isStale = false
         loadError = nil
         lastRequestedURL = url
         webView.load(URLRequest(url: url))
+    }
+
+    func reloadIfStale() {
+        guard isStale, webView.url != nil else { return }
+        isStale = false
+        webView.reload()
     }
 
     func goHome() {
@@ -151,5 +164,13 @@ extension WebViewStore: WKUIDelegate {
             onRoute?(decision)
         }
         return nil
+    }
+}
+
+private final class WeakScriptMessageHandler: NSObject, WKScriptMessageHandler {
+    var onMessage: (@MainActor () -> Void)?
+
+    func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
+        MainActor.assumeIsolated { onMessage?() }
     }
 }
