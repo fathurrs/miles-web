@@ -1,0 +1,566 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0B3565C14B9C36C3AEF2F67B /* LinkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99200A192683BB38814C07DD /* LinkRouter.swift */; };
+		1C9447383737392EF0404CA4 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A07CF1679C9D070258E7A81 /* AppModel.swift */; };
+		316A52EBEB4207531E330880 /* LinkRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300B8DD9E4737615BD4D15DF /* LinkRouterTests.swift */; };
+		4D2A6EE776DC9E035AA36208 /* WebViewStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE968E8BF09A824B7F5DF79 /* WebViewStore.swift */; };
+		4D2C3BE7B2D14C3798617BE0 /* BudakMilesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111C22D0488014A87979129F /* BudakMilesUITests.swift */; };
+		5781287F97A6FC3B6C8969DF /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06BC7BED85F2A5246DB7A5A /* AppConfig.swift */; };
+		74C719237344CB07C0522B81 /* AppTabTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C207B41E024E26FBDD7B4CFF /* AppTabTests.swift */; };
+		88487DEE38527B68BFCAACA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B72F8327F05F29FC25FA486 /* Assets.xcassets */; };
+		B28EE4F617762476E18A0CF8 /* WebTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BF497991C8BCF6C4D03DCC /* WebTabView.swift */; };
+		B92455E973B462D57279ACDB /* BudakMilesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76243170FC509FFF728990E /* BudakMilesApp.swift */; };
+		C0D87E13BFE38B9DF6EC9D7D /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C5C82127D38DA3BD93ED74 /* RootView.swift */; };
+		C4DAF164E530C85B035D4DA5 /* AppTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF2662C84EF783473F94999 /* AppTab.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5C2083468174EA0E6F7EBE85 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4262565CF7BC080C1C7D5B3D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C14CF9E0992F5A424746C767;
+			remoteInfo = BudakMiles;
+		};
+		AC07EF3530D730C276DC2582 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4262565CF7BC080C1C7D5B3D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C14CF9E0992F5A424746C767;
+			remoteInfo = BudakMiles;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		111C22D0488014A87979129F /* BudakMilesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudakMilesUITests.swift; sourceTree = "<group>"; };
+		13F8AF8CCC462626D52E5647 /* BudakMilesTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = BudakMilesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2FE968E8BF09A824B7F5DF79 /* WebViewStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewStore.swift; sourceTree = "<group>"; };
+		300B8DD9E4737615BD4D15DF /* LinkRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkRouterTests.swift; sourceTree = "<group>"; };
+		3A07CF1679C9D070258E7A81 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		56667C19D15961D6DB467EF8 /* BudakMiles.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = BudakMiles.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		59BBA5F84D9E29B0CB01D0B7 /* BudakMilesUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = BudakMilesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B72F8327F05F29FC25FA486 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		92C5C82127D38DA3BD93ED74 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		99200A192683BB38814C07DD /* LinkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkRouter.swift; sourceTree = "<group>"; };
+		AA2DF53008B16FCDE6EBE2CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		B7BF497991C8BCF6C4D03DCC /* WebTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebTabView.swift; sourceTree = "<group>"; };
+		C207B41E024E26FBDD7B4CFF /* AppTabTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabTests.swift; sourceTree = "<group>"; };
+		CFF2662C84EF783473F94999 /* AppTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTab.swift; sourceTree = "<group>"; };
+		E06BC7BED85F2A5246DB7A5A /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
+		F76243170FC509FFF728990E /* BudakMilesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudakMilesApp.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		2E0DAA760F8574E0507FA084 /* BudakMiles */ = {
+			isa = PBXGroup;
+			children = (
+				AA2DF53008B16FCDE6EBE2CA /* Info.plist */,
+				4766C3642393AA9305129A41 /* App */,
+				4F2EF502683E0061C2A50DAA /* Resources */,
+			);
+			path = BudakMiles;
+			sourceTree = "<group>";
+		};
+		3445CC2D54ED19787F69C611 /* BudakMilesUITests */ = {
+			isa = PBXGroup;
+			children = (
+				111C22D0488014A87979129F /* BudakMilesUITests.swift */,
+			);
+			path = BudakMilesUITests;
+			sourceTree = "<group>";
+		};
+		4103F0950C6B3DE644AD823B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				56667C19D15961D6DB467EF8 /* BudakMiles.app */,
+				13F8AF8CCC462626D52E5647 /* BudakMilesTests.xctest */,
+				59BBA5F84D9E29B0CB01D0B7 /* BudakMilesUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4766C3642393AA9305129A41 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				E06BC7BED85F2A5246DB7A5A /* AppConfig.swift */,
+				3A07CF1679C9D070258E7A81 /* AppModel.swift */,
+				CFF2662C84EF783473F94999 /* AppTab.swift */,
+				F76243170FC509FFF728990E /* BudakMilesApp.swift */,
+				99200A192683BB38814C07DD /* LinkRouter.swift */,
+				92C5C82127D38DA3BD93ED74 /* RootView.swift */,
+				B7BF497991C8BCF6C4D03DCC /* WebTabView.swift */,
+				2FE968E8BF09A824B7F5DF79 /* WebViewStore.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		4F2EF502683E0061C2A50DAA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6B72F8327F05F29FC25FA486 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D9F74179BD372E0C65934442 /* BudakMilesTests */ = {
+			isa = PBXGroup;
+			children = (
+				C207B41E024E26FBDD7B4CFF /* AppTabTests.swift */,
+				300B8DD9E4737615BD4D15DF /* LinkRouterTests.swift */,
+			);
+			path = BudakMilesTests;
+			sourceTree = "<group>";
+		};
+		ED622871B49300A6B20A4582 = {
+			isa = PBXGroup;
+			children = (
+				2E0DAA760F8574E0507FA084 /* BudakMiles */,
+				D9F74179BD372E0C65934442 /* BudakMilesTests */,
+				3445CC2D54ED19787F69C611 /* BudakMilesUITests */,
+				4103F0950C6B3DE644AD823B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		799867BED11F678E27DEC0CB /* BudakMilesUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8B6F0F8DEE7D88D2F2861A7B /* Build configuration list for PBXNativeTarget "BudakMilesUITests" */;
+			buildPhases = (
+				6050CEB9C6B79701BC5D4C6B /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7F3A3BF7FFD79CF61CD3848E /* PBXTargetDependency */,
+			);
+			name = BudakMilesUITests;
+			packageProductDependencies = (
+			);
+			productName = BudakMilesUITests;
+			productReference = 59BBA5F84D9E29B0CB01D0B7 /* BudakMilesUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		BF4CB891EAAB98BF1AE4DD1E /* BudakMilesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8AAD5FE71E9AADECE190112F /* Build configuration list for PBXNativeTarget "BudakMilesTests" */;
+			buildPhases = (
+				57E88EDECE719CFCC9BF019B /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				549F7E21EB69E22C0B6FA48F /* PBXTargetDependency */,
+			);
+			name = BudakMilesTests;
+			packageProductDependencies = (
+			);
+			productName = BudakMilesTests;
+			productReference = 13F8AF8CCC462626D52E5647 /* BudakMilesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C14CF9E0992F5A424746C767 /* BudakMiles */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C3416F6341B05E63FA281499 /* Build configuration list for PBXNativeTarget "BudakMiles" */;
+			buildPhases = (
+				A3AD860E3EF6FD4709D4C218 /* Sources */,
+				115B381F6CDD11FDCA4F3BED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BudakMiles;
+			packageProductDependencies = (
+			);
+			productName = BudakMiles;
+			productReference = 56667C19D15961D6DB467EF8 /* BudakMiles.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4262565CF7BC080C1C7D5B3D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					799867BED11F678E27DEC0CB = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+						TestTargetID = C14CF9E0992F5A424746C767;
+					};
+					BF4CB891EAAB98BF1AE4DD1E = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
+					C14CF9E0992F5A424746C767 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 81FCD787343FD6648B23D5D7 /* Build configuration list for PBXProject "BudakMiles" */;
+			developmentRegion = id;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				id,
+			);
+			mainGroup = ED622871B49300A6B20A4582;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 4103F0950C6B3DE644AD823B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C14CF9E0992F5A424746C767 /* BudakMiles */,
+				BF4CB891EAAB98BF1AE4DD1E /* BudakMilesTests */,
+				799867BED11F678E27DEC0CB /* BudakMilesUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		115B381F6CDD11FDCA4F3BED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88487DEE38527B68BFCAACA4 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		57E88EDECE719CFCC9BF019B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74C719237344CB07C0522B81 /* AppTabTests.swift in Sources */,
+				316A52EBEB4207531E330880 /* LinkRouterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6050CEB9C6B79701BC5D4C6B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D2C3BE7B2D14C3798617BE0 /* BudakMilesUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A3AD860E3EF6FD4709D4C218 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5781287F97A6FC3B6C8969DF /* AppConfig.swift in Sources */,
+				1C9447383737392EF0404CA4 /* AppModel.swift in Sources */,
+				C4DAF164E530C85B035D4DA5 /* AppTab.swift in Sources */,
+				B92455E973B462D57279ACDB /* BudakMilesApp.swift in Sources */,
+				0B3565C14B9C36C3AEF2F67B /* LinkRouter.swift in Sources */,
+				C0D87E13BFE38B9DF6EC9D7D /* RootView.swift in Sources */,
+				B28EE4F617762476E18A0CF8 /* WebTabView.swift in Sources */,
+				4D2A6EE776DC9E035AA36208 /* WebViewStore.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		549F7E21EB69E22C0B6FA48F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C14CF9E0992F5A424746C767 /* BudakMiles */;
+			targetProxy = AC07EF3530D730C276DC2582 /* PBXContainerItemProxy */;
+		};
+		7F3A3BF7FFD79CF61CD3848E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C14CF9E0992F5A424746C767 /* BudakMiles */;
+			targetProxy = 5C2083468174EA0E6F7EBE85 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		32BED3526D1597D3E1486683 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = id.budakmiles.app.tests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BudakMiles.app/BudakMiles";
+			};
+			name = Debug;
+		};
+		365A775618AE846375AEAA72 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = BudakMiles/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = id.budakmiles.app;
+				PRODUCT_NAME = BudakMiles;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3CBA5B8691E5ABA4CDA177FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		676E9C71B9EC2C2A19CA2487 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = id.budakmiles.app.uitests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BudakMiles;
+			};
+			name = Release;
+		};
+		BF28616F88BBBAFB4CCBD6FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = id.budakmiles.app.uitests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BudakMiles;
+			};
+			name = Debug;
+		};
+		D3802D569EDCD9A7B07B1029 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = BudakMiles/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = id.budakmiles.app;
+				PRODUCT_NAME = BudakMiles;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D91F537296B7C4FF88F45462 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = id.budakmiles.app.tests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BudakMiles.app/BudakMiles";
+			};
+			name = Release;
+		};
+		DB3626EDEFDAD4D43E3A043E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		81FCD787343FD6648B23D5D7 /* Build configuration list for PBXProject "BudakMiles" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB3626EDEFDAD4D43E3A043E /* Debug */,
+				3CBA5B8691E5ABA4CDA177FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		8AAD5FE71E9AADECE190112F /* Build configuration list for PBXNativeTarget "BudakMilesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				32BED3526D1597D3E1486683 /* Debug */,
+				D91F537296B7C4FF88F45462 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		8B6F0F8DEE7D88D2F2861A7B /* Build configuration list for PBXNativeTarget "BudakMilesUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF28616F88BBBAFB4CCBD6FC /* Debug */,
+				676E9C71B9EC2C2A19CA2487 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		C3416F6341B05E63FA281499 /* Build configuration list for PBXNativeTarget "BudakMiles" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3802D569EDCD9A7B07B1029 /* Debug */,
+				365A775618AE846375AEAA72 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4262565CF7BC080C1C7D5B3D /* Project object */;
+}
