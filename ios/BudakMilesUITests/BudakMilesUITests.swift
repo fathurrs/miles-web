@@ -59,6 +59,18 @@ final class BudakMilesUITests: XCTestCase {
         XCTAssertFalse(tabButton(app, "Kalkulator").isSelected)
     }
 
+    func testReselectingTabReturnsHome() {
+        let app = launch()
+        let webView = app.webViews["webView.kalkulator"]
+        let hero = webText(in: webView, containing: "Hitung miles")
+        XCTAssertTrue(hero.waitForExistence(timeout: 45))
+        webView.links["Kalkulator lengkap"].firstMatch.tap()
+        let gone = expectation(for: NSPredicate(format: "exists == false"), evaluatedWith: hero)
+        wait(for: [gone], timeout: 30)
+        tabButton(app, "Kalkulator").tap()
+        XCTAssertTrue(hero.waitForExistence(timeout: 30), "Re-tapping the selected tab should return to its start page")
+    }
+
     func testUnreachableShowsErrorAndRetry() {
         let app = launch(["-UITestUnreachable"])
         let errorView = app.descendants(matching: .any)["errorView"]
