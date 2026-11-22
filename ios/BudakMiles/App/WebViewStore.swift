@@ -37,7 +37,13 @@ final class WebViewStore: NSObject, ObservableObject {
         messageProxy.onMessage = { [weak self] in self?.isStale = true }
 
         webView.accessibilityIdentifier = "webView.\(tab.rawValue)"
-        webView.allowsBackForwardNavigationGestures = true
+        // WebKit's own swipe gesture never fires inside the SwiftUI TabView, so edge swipes are handled here.
+        for edge in [UIRectEdge.left, .right] {
+            let swipe = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(edgeSwipe(_:)))
+            swipe.edges = edge
+            swipe.delegate = self
+            webView.addGestureRecognizer(swipe)
+        }
         webView.navigationDelegate = self
         webView.uiDelegate = self
 
@@ -81,6 +87,16 @@ final class WebViewStore: NSObject, ObservableObject {
 
     func retry() {
         load(lastRequestedURL ?? rootURL)
+    }
+
+    @objc private func edgeSwipe(_ gesture: UIScreenEdgePanGestureRecognizer) {
+        guard gesture.state == .ended else { return }
+        let distance = gesture.translation(in: webView).x
+        if gesture.edges == .left, distance > 60, webView.canGoBack {
+            webView.goBack()
+        } else if gesture.edges == .right, distance < -60, webView.canGoForward {
+            webView.goForward()
+        }
     }
 
     @objc private func pullToRefresh() {
@@ -172,5 +188,12 @@ private final class WeakScriptMessageHandler: NSObject, WKScriptMessageHandler {
 
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
         MainActor.assumeIsolated { onMessage?() }
+    }
+}
+
+extension WebViewStore: UIGestureRecognizerDelegate {
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer,
+                           shouldRecognizeSimultaneouslyWith other: UIGestureRecognizer) -> Bool {
+        true
     }
 }

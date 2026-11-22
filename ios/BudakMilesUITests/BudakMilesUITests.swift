@@ -64,11 +64,24 @@ final class BudakMilesUITests: XCTestCase {
         let webView = app.webViews["webView.kalkulator"]
         let hero = webText(in: webView, containing: "Hitung miles")
         XCTAssertTrue(hero.waitForExistence(timeout: 45))
-        webView.links["Kalkulator lengkap"].firstMatch.tap()
+        webView.links.matching(NSPredicate(format: "label CONTAINS[c] %@", "kalkulator lengkap")).firstMatch.tap()
         let gone = expectation(for: NSPredicate(format: "exists == false"), evaluatedWith: hero)
         wait(for: [gone], timeout: 30)
         tabButton(app, "Kalkulator").tap()
         XCTAssertTrue(hero.waitForExistence(timeout: 30), "Re-tapping the selected tab should return to its start page")
+    }
+
+    func testSwipeFromLeftEdgeGoesBack() {
+        let app = launch()
+        let webView = app.webViews["webView.kalkulator"]
+        let hero = webText(in: webView, containing: "Hitung miles")
+        XCTAssertTrue(hero.waitForExistence(timeout: 45))
+        webView.links.matching(NSPredicate(format: "label CONTAINS[c] %@", "kalkulator lengkap")).firstMatch.tap()
+        let gone = expectation(for: NSPredicate(format: "exists == false"), evaluatedWith: hero)
+        wait(for: [gone], timeout: 30)
+        let start = webView.coordinate(withNormalizedOffset: CGVector(dx: 0, dy: 0.5))
+        start.press(forDuration: 0.05, thenDragTo: start.withOffset(CGVector(dx: 300, dy: 0)))
+        XCTAssertTrue(hero.waitForExistence(timeout: 30), "Swiping from the left edge should go back")
     }
 
     func testUnreachableShowsErrorAndRetry() {
